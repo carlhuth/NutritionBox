@@ -1,0 +1,550 @@
+@import url('https://fonts.googleapis.com/css?family=Flamenco:300,400|Inconsolata:400,700|Lobster');
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+html{
+    background: #808080;
+}
+
+body {
+    -webkit-touch-callout: none;
+    -webkit-text-size-adjust: none;
+    -webkit-user-select: none;
+    background-color: white;
+    background-image: linear-gradient(top, white 0%, white 51%);
+    background-image: -webkit-linear-gradient(top, white 0%, white 51%);
+    background-image: -ms-linear-gradient(top, white 0%, white 51%);
+    background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0, white), color-stop(0.51, white) );
+    background-attachment: fixed;
+    font-family: 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    min-height: 100vh;
+    
+    background-color: #32383d;
+    font-family: 'RobotoRegular', 'Droid Sans', 'Segoe UI', Segoe, 'San Francisco', 'Helvetica Neue', Helvetica, Arial, Geneva, sans-serif;
+    font-size: 12px;
+}
+
+.app {
+    margin: 0 auto;
+    padding: 15% auto;
+    height: 70%;                  
+    width: 90%;                   
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.app-index {
+    margin: 0 auto;
+    height: 100vh;
+    width: 90%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.logo img{
+    width: 100%;
+    height: auto;
+}
+
+.login .info{
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.signup{
+    width: 100%;
+}
+
+.signup .info {
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+input{
+    border-radius: 25px;
+    height: 20px;
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+label{
+    text-align: left;
+}
+
+.btn{
+    margin: 10px auto;
+    padding: 5px 20px;
+    color: white;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.3em;
+    color: black;
+    font-family: "Inconsolata";
+}
+
+.orange {
+    background: linear-gradient(to right, #ea5751, #f09f4f);
+}
+
+.green {
+    background: linear-gradient(to right, #a3b546, #8cae9c);
+}
+
+.red{
+    color: red;
+}
+
+.header {
+    width: 100%;
+    height: 10vh;
+    padding-top: 5px;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 0 10px black;
+    position: fixed;
+    background: white;
+    z-index: 100;
+}
+
+.header *{
+    margin: 0 10px;
+}
+ .header .logo {
+    height: 10vh;
+    width: 100%;
+    padding-right: 20px;
+ }
+
+.header .logo img {        
+    height: 10vh;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.profile{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+    .profile img {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        box-shadow: 0 0 5px black;
+        align-items: center;
+        object-fit: cover;
+        object-position: center;
+        overflow: hidden;
+    }
+
+.footer {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 0 1px black;
+    position: fixed;
+    bottom: 0;
+    background: white;
+    z-index: 100;
+}
+
+.footer a{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.active {
+    color: #ea5751 !important;
+}
+
+.footer a{
+    text-decoration: none;
+    font-size: 2em;
+    color: grey;
+}
+
+.main {
+    padding: 15vh 20px;
+    
+}
+
+.profile-header {
+    width: 100%;
+    height: 8vh;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 0 10px black;
+    position: fixed;
+    background: white;
+}
+
+.profile-header *{
+    width: 100%;
+    text-align: center;
+}
+
+.heading{
+    flex-basis: 75%;
+}
+
+.back{
+    flex-basis: 10%;
+    text-decoration: none;
+    font-size: 2.5em;
+}
+
+.edit {
+    flex-basis: 15%;
+    text-decoration: none;
+}
+
+
+.profile-home .profile img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+}
+
+.profile-home .main{
+    padding: 15vh 0;
+}
+
+.profile-home .profile-a {
+    display: block;
+    padding: 10px;
+    font-size: 1.5em;
+    box-shadow: 0 1px 2px -2px black;
+}
+
+.profile-home table {
+    width: 100%;
+    margin-top: 20px;
+    padding: 0 10px;
+    box-shadow: 0 0 1px black;
+    font-size: 1.5em;
+    font-family: "Inconsolata";
+}
+
+.profile-home td {
+    padding: 8px 0;
+}
+
+.profile-home td:nth-of-type(1) {
+    width: 30%;
+}
+
+.profile-home td:nth-of-type(2) {
+    width: 70%;
+    box-shadow: 0 1px 2px -2px black;
+}
+
+.profile-home tr:last-of-type td:nth-of-type(2) {
+    box-shadow: none;
+}
+
+
+.profile-image .main{
+    padding-top: 20vh;
+    width: 100%;
+    height: 400px;
+}
+
+
+.profile-image .main img {
+    width: 100%;
+    height:400px;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+}
+
+.profile-edit input{
+    border: none;
+    padding: 0;
+}
+
+#upload {
+    display: none
+}
+
+.high{
+    background-color: #00cc00;
+}
+
+.searchbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+}
+
+#input_item{
+    flex-basis: 85%;
+}
+
+#btn{
+    flex-basis: 10%;
+    text-decoration: none;
+    font-size: 2em;
+    color: white;
+    padding-left: 2px;
+}
+
+.proddes{
+    padding: 20px 0;
+}
+
+.rsearch{
+    text-decoration: none;
+    font-size: 1.5em;
+    
+}
+
+.food {
+    box-shadow: 0 2px 2px -2px black;
+    padding: 10px 2px;
+}
+
+p {
+    font-family: "Inconsolata";
+    font-size: 1rem;
+}
+
+.pdata {
+    font-family: Verdana;
+    width: 80%;
+    margin: 5px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.message{
+    text-align: right;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.message p {
+    margin-top: 0;
+    color: #8cae9c;
+}
+
+.prodlink{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.changecolor {
+    color: #ea5751;
+}
+
+.addbtn{
+    text-decoration: none;
+    font-size: 4em;
+    margin-left: 10px;
+}
+
+.foodlist {
+    box-shadow: 0 2px 2px -2px black;
+    padding: 10px 2px;
+}
+
+.foodlist p{
+    margin-bottom:0;
+    font-family: Arial;
+    font-size: 0.8rem;
+}
+
+.foodlink {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delbtn {
+    text-decoration: none;
+    font-size: 2em;
+    margin-left: 10px;
+} 
+
+@media screen and (min-width: 520px) {
+        body, .header, .footer {
+        width: 520px;
+        
+        margin: 0 auto;
+    }
+}
+
+.myProgress {
+    width: 100%;
+    background-color: #ddd;
+    display: flex;
+}
+
+#myBar {
+    width: 1%;
+    height: 30px;
+    background: linear-gradient(to right, #a3b546, #8cae9c);
+    text-align: center;
+    line-height: 30px;
+    color: white;
+}
+
+#over {
+    width: 0%;
+    height: 30px;
+    background: linear-gradient(to right, #ea5751, #f09f4f);
+}
+
+.note {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+    background: linear-gradient(to right, #ea5751, #f09f4f);
+    opacity: 0.5;
+    border: 2px dashed white;
+}
+
+.foodpage #addition h3{
+    text-align: center;
+}
+
+.foodpage #addition .searchbar{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.foodpage #addition .food p {
+    margin-bottom: 0;
+    font-family: Arial;
+    font-size: 0.8rem;
+}
+
+.edata {
+    box-shadow: 0 2px 2px -2px black;
+}
+
+.ename {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 2px;
+}
+
+.ename p{
+    flex-basis: 78%;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.ename img{
+    
+    width: 30px;
+    height: 30px;
+}
+
+.highlight {
+    color: #ea5751;
+    font-weight: bold;
+}
+
+.totalcal {
+    display: flex;
+    justify-content: space-around;
+}
+
+.totalcal p{
+    font-size: 0.8rem;
+    border-right: 1px solid black;
+    text-align: center;
+    flex-basis: 33.3%
+}
+
+.foodpage .totalcal p{
+    flex-basis: 48%;
+    padding: 0 5px;
+}
+
+.totalcal p:last-of-type{
+    border-right: none;
+}
+
+.totalcal p span{
+    font-size: 1rem;
+    display: block;
+    padding-top: 2px;
+}
+
+.data{
+    border-top: 1px dotted black;
+    border-bottom: 1px dotted black;
+}
+
+.same{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.same p{
+    font-size: 1.2rem;
+}
+
+.det{
+    padding: 0 20px;
+}
+
+.det p{
+    margin: 0 0 5px 0;
+    font-size: 0.9rem;
+}
+
+.hide {
+    display: none;
+}

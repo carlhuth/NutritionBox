@@ -1,0 +1,151 @@
+﻿<html>
+<head>
+    <meta name="viewport" content="user-scalable=no" />
+    <title>Canvas</title>
+
+    <style type="text/css">
+        html{
+            position: fixed;
+        }
+        div {
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+        }
+        table{
+            position: fixed;
+        }
+
+        td {
+            width: 50px;
+            height: 50px;
+            margin: 0;
+        }
+
+        tr {
+            margin: 0;
+        }
+
+        .bt {
+            border-top: 1px solid black;
+        }
+
+        .br {
+            border-right: 1px solid black;
+        }
+
+        .bl {
+            border-left: 1px solid black;
+        }
+
+        .bb {
+            border-bottom: 1px solid black;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<body onload="init()">
+
+    <table id="table"></table>
+    <div id="coords"></div>
+    <div id="cod"></div>
+    <script>
+
+        var table = document.getElementById("table");
+        var y = "";
+
+        for (var i = 0; i < 8; i++) {
+            y += "<tr>";
+            for (var j = 0; j < 8; j++) {
+                y += "<td id='" + i + j + "'></td>";
+            }
+            y += "</tr>";
+        }
+
+        table.innerHTML = y;
+
+        var bt = ['01', '02', '03', '04', '05', '06', '07', '15', '21', '22', '27', '31', '33', '34', '36', '44', '50', '51', '55', '56', '57', '62', '63', '71', '73', '74'];
+
+        for (var i = 0; i < bt.length; i++) {
+            jQuery('#' + bt[i]).addClass('bt');
+        }
+
+        var br = ['01', '03', '07', '10', '11', '12', '13', '14', '15', '16', '17', '23', '25', '27', '30', '31', '31', '34', '35', '36', '37', '41', '42', '43', '46', '47', '53', '54', '56', '57', '60', '65', '66', '67', '71', '72', '75', '77'];
+
+        for (var i = 0; i < br.length; i++) {
+            jQuery('#' + br[i]).addClass('br');
+        }
+
+        var bl = ['00', '10', '20', '30', '40', '50', '60', '70'];
+
+        for (var i = 0; i < bl.length; i++) {
+            jQuery('#' + bl[i]).addClass('bl');
+        }
+
+        var bb = ['70', '71', '72', '73', '74', '75', '76'];
+
+        for (var i = 0; i < bb.length; i++) {
+            jQuery('#' + bb[i]).addClass('bb');
+        }
+
+    </script>
+
+    <script type='text/javascript'>
+        var ongoingTouches = [];
+
+        function init() {
+            // Get a reference to our touch-sensitive element
+            var touchzone = document.getElementById("table");
+            // Add an event handler for the touchstart event
+            touchzone.addEventListener("touchstart", touchHandler, false);
+            touchzone.addEventListener("touchmove", touchHandler, false);
+        }
+        function touchHandler(event) {
+            
+            // Get a reference to our coordinates div
+            var coords = document.getElementById("coords");
+            var cod = document.getElementById("cod");
+            var touches = event.changedTouches;
+
+            // Write the coordinates of the touch to the div
+            
+            coords.innerHTML = '<p>x: ' + event.touches[0].pageX + ', y: ' + event.touches[0].pageY + '</p><p>' + event.changedTouches[0].target.id + '</p>';
+            var tar = document.elementFromPoint(event.touches[0].pageX, event.touches[0].pageY);
+            cod.innerHTML = '<p>target' + tar.id + '</p>' + cod.innerHTML;
+
+            for (var i = 0; i < touches.length; i++) {
+                
+                var idx = ongoingTouchIndexById(touches[i].identifier);
+                //cod.innerHTML = '<p>target' + event.changedTouches[0].target.id + '</p>';
+                if (idx >= 0) {
+
+                    //cod.innerHTML = '<p>target' + ongoingTouches[idx].target.id + '</p>';
+                    
+                    ongoingTouches.splice(idx, 1, copyTouch(touches[i])); // swap in the new touch record
+                    
+                } else {
+                    
+                }
+                
+            }
+        }
+
+        function ongoingTouchIndexById(idToFind) {
+            for (var i = 0; i < ongoingTouches.length; i++) {
+                var id = ongoingTouches[i].identifier;
+
+                if (id == idToFind) {
+                    return i;
+                }
+            }
+            return -1;    // not found
+        }
+
+        function copyTouch(touch) {
+            return { identifier: touch.identifier, pageX: touch.pageX, pageY: touch.pageY };
+        }
+    </script>
+</body>
+</html>

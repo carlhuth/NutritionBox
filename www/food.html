@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
+        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+    <!--   <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *"> -->
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="icomoon/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>NutritionApp</title>
+
+    <link rel='stylesheet' href='css/fullcalendar.css' />
+    <script src='scripts/jquery.min.js'></script>
+    <script src='scripts/moment.min.js'></script>
+    <script src='scripts/fullcalendar.js'></script>
+    <link href='css/fullcalendar.min.css' rel='stylesheet' />
+</head>
+<body onload="profileImage()">
+
+    <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDR0T8VqzPo5OCde-hxyYNfwwVUmL2Zipw",
+            authDomain: "nutrition-fba71.firebaseapp.com",
+            databaseURL: "https://nutrition-fba71.firebaseio.com",
+            projectId: "nutrition-fba71",
+            storageBucket: "nutrition-fba71.appspot.com",
+            messagingSenderId: "560280543857"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <div class="home">
+        <div class="header">
+            <a href="profile.html" id="profile" class="profile"><img src="images/cordova.png" /></a>
+            <div class="logo"><img src="images/logo3.png" alt="logo" /></div>
+        </div>
+
+        <div class="main foodpage">
+            <h1>Food Log</h1>
+            <div id='calendar'></div>
+            <div id="myProgress" class="myProgress">
+                <div id="myBar"></div>
+                <div id="over"></div>
+            </div>
+            
+            <div id="totalcal" class="totalcal"></div><hr />
+            <div id="reader"></div>
+            <div id="addition">
+                <h3>Search and Add</h3>
+                <div class="searchbar green">
+                    <input type="text" name="input" id="input_item" placeholder="Search Food" />
+                    <a href="#" id="btn" class="icon-search"></a>
+                </div>
+                <div id="output"></div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <a href="activity.html" class="activity icon-accessibility"></a>
+            <a href="food.html" class="foodlog icon-spoon-knife active"></a>
+            <a href="search.html" class="search icon-search"></a>
+            <a href="community.html" class="community icon-users"></a>
+        </div>
+
+
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+    <script type="text/javascript" src="scripts/foodlog.js"></script>
+</body>
+</html>

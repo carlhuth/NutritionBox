@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
+        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+    <!--   <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *"> -->
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="icomoon/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>NutritionApp</title>
+</head>
+<body onload="profileEdit1()">
+
+    <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDR0T8VqzPo5OCde-hxyYNfwwVUmL2Zipw",
+            authDomain: "nutrition-fba71.firebaseapp.com",
+            databaseURL: "https://nutrition-fba71.firebaseio.com",
+            projectId: "nutrition-fba71",
+            storageBucket: "nutrition-fba71.appspot.com",
+            messagingSenderId: "560280543857"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <div class="profile-home profile-edit">
+        <div class="profile-header header">
+            <a href="profile.html" class="back"><</a>
+            <div class="heading"><h1>Profile</h1></div>
+            <a href="#" class="done edit" onClick="done()">Done</a>
+
+        </div>
+
+        <div class="main">
+
+            <table>
+                <tr>
+                    <td>Username</td>
+                    <td><input id="username" type="text" name="username" value="" /></td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td><select name="age" id="age"></select></td>
+                </tr>
+                <tr>
+                    <td>Height</td>
+                    <td><input id="height" type="text" name="height" value="" />cm</td>
+                </tr>
+                <tr>
+                    <td>Weight</td>
+                    <td><input id="weight" type="text" name="weight" value="" />kg</td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <select name="gender" id="gender">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Activity Level</td>
+                    <td>
+                        <select name="activity" id="activity">
+                            <option value="1.2">Sedentary</option>
+                            <option value="1.375">Lightly Active</option>
+                            <option value="1.55">Moderately Active</option>
+                            <option value="1.725">Very Active</option>
+                            <option value="1.9">Extra Active</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+
+            
+        </div>
+
+
+
+
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+</body>
+</html>
+

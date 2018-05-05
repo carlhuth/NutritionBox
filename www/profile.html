@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
+        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+    <!--   <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *"> -->
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="icomoon/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>NutritionApp</title>
+</head>
+<body onload="profile()">
+
+    <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDR0T8VqzPo5OCde-hxyYNfwwVUmL2Zipw",
+            authDomain: "nutrition-fba71.firebaseapp.com",
+            databaseURL: "https://nutrition-fba71.firebaseio.com",
+            projectId: "nutrition-fba71",
+            storageBucket: "nutrition-fba71.appspot.com",
+            messagingSenderId: "560280543857"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <div class="profile-home">
+        <div class="profile-header header">
+            <a href="activity.html" class="back"><</a>
+            <div class="heading"><h1>Profile</h1></div>
+            <a href="profile-edit.html" class="edit">Edit</a>
+
+        </div>
+
+        <div class="main">
+            <a href="profile-image.html" id="profile" class="profile"><img src="images/cordova.png"/></a>
+
+            <table>
+                <tr>
+                    <td>Username</td>
+                    <td id="username"></td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td id="age"></td>
+                </tr>
+                <tr>
+                    <td>Height</td>
+                    <td id="height"></td>
+                </tr>
+                <tr>
+                    <td>Weight</td>
+                    <td id="weight"></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td id="gender"></td>
+                </tr>
+                <tr>
+                    <td>Activity Level</td>
+                    <td id="activity"></td>
+                </tr>
+                <tr>
+                    <td>Calories Required</td>
+                    <td id="calories"></td>
+                </tr>
+            </table>
+
+            <a id="" class="profile-a">Help</a>
+            <a id="btnLogout" class="profile-a red" onClick="logout()">Logout</a>
+        </div>
+
+
+
+
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+</body>
+</html>
+
